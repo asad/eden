@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#================================================
-# Docker entrypointpoint
-# by Philipp C. Münch
-# philipp.muench@helmholtz-hzi.de
-#================================================
-
 # import logging functions
 .  /home/eden/src/lib.logging.sh
 

@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#================================================
-# EDEN
-# by Philipp C. Münch
-# philipp.muench@helmholtz-hzi.de
-#================================================
-
 . /opt/bin/shflags
 . /home/eden/src/lib.logging.sh 
 

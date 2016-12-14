@@ -1,11 +1,6 @@
 #!/bin/bash
 
 #================================================
-# Logging functions
-# philipp.muench@helmholtz-hzi.de
-#================================================
-
-#================================================
 # Purpose: write log file to "$LOG_FILE"
 # Arguments:
 #   $1 -> String to log

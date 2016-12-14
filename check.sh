@@ -1,11 +1,5 @@
 #!/bin/bash
 
-#================================================
-# check input files
-# by Philipp C. Münch
-# philipp.muench@helmholtz-hzi.de
-#================================================
-
 # process paramters
 if [ $# == 0 ] ; then
     echo $USAGE

@@ -1,6 +1,6 @@
 FROM textlab/ubuntu-essential
 
-MAINTAINER Philipp Münch "philippmuench@helmholtz-hzi.de"
+MAINTAINER anon
 
 #========================================
 # Customize sources for apt-get 
