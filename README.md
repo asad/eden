@@ -3,6 +3,8 @@
 # install eden
 dependencies: [Docker](https://github.com/docker/docker) 
 
+the docker image is hostet via docker.io, you can pull/run it using these commands:
+
 `sudo docker run -p 80:3838 edensoftware/eden` (version with example files)
 
 `sudo docker run -p 80:3838 edensoftware/eden:minimal` (minimal version)
