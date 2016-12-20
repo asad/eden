@@ -14,3 +14,16 @@ open your webbrowser and point it to [localhost](localhost)
 
 # visualize results
 ![visualize results](samples.gif "visualize results")
+
+# build your own docker image
+
+you can create the docker image from scratch:
+
+```
+git clone https://github.com/naturesubmission/eden.git
+cd eden
+sudo docker build eden_local .
+sudo docker run -p 80:3838 eden_local
+# point browser to localhost
+```
+
