@@ -1,23 +1,36 @@
 # eden
-
-# install eden
 dependencies: [Docker](https://github.com/docker/docker) 
 
-the docker image is hostet via docker.io, you can pull/run it using these commands:
 
-`sudo docker run -p 80:3838 edensoftware/eden` (version with example files)
+# install linux & macOS
+1. the docker image is hostet via docker.io, you can pull/run it using these commands:
+2. `sudo docker run -p 80:3838 edensoftware/eden` (version with example files)
+3. `sudo docker run -p 80:3838 edensoftware/eden:minimal` (minimal version)
+4. open your webbrowser and point it to [localhost](localhost), you should see the welcome screen
 
-`sudo docker run -p 80:3838 edensoftware/eden:minimal` (minimal version)
 
 # install eden on windows
+1. see the tutorial https://docs.docker.com/docker-for-windows/ for installation and setting up docker on your windows machine
+2. Press *WinKey + R*, Input `cmd` and press enter to start the cmd.exe to open the command promt
+3. Type in the following command to download/start the docker image `sudo docker run -p 80:3838 edensoftware/eden` 
+4. point your webbrowser (Google Chrome, Firefox) to  [localhost](localhost), you should see the welcome screen
 
-see the tutorial https://docs.docker.com/docker-for-windows/ for installation and setting up docker on your windows machine. 
-Press WinKey + R, Input "cmd" and press enter to start the cmd.exe. Type in the following command to download/start the docker image
+# install eden in the cloud
+1. see https://aws.amazon.com/de/ec2/ and create an account
+2. go to your dahsboard and click on *Launch Instance* and select "Ubuntu Server 14.4 LTS"
+3. choose the size of of server you want to rent, *t2.micro* is maybe free for some users
+4. click on *Review Instance Launch* and click on *Launch*
+5. create a new key pair, and download this file to your local machine
+6. click *Launch and View Instance* and wait till the *Instance State* goes from *pending* to *running*
+7. copy the Public DNS which looks like `ec2-54-234-172-226.compute-1.amazonaws.com
+8. change the access of the local key you downloaded in step 5. `chmod 400 /path/key.pem`
+9. open your terminal (e.g. bash on linux/macOS, cmd on windwos) and login to the server by typing in: `ssh -i "/path-to-key-from-step-4/key.pem" ubuntu@your-public-dns-copied-in-step-6` and type in *yes*
+10. execute the command: `sudo apt-get install -y git && git clone https://github.com/philippmuench/eden.git && cd eden && sudo chmod a+x aws-install.sh && ./aws-install.sh`
+11. execute `sudo docker run -p 80:3838 edensoftware/eden`. eden is now running and can be accessed via the public IP or the public DNS e.g. at http://ec2-54-234-172-226.compute-1.amazonaws.com
+12. to terminate the server go to the *EC2 dashboard* an click *Actions > Instance state > Terminate*
 
-`sudo docker run -p 80:3838 edensoftware/eden` 
 
 
-open your webbrowser and point it to [localhost](localhost)
 
 # submit a new job
 ![submit a new job](start.gif "submit a new job")
