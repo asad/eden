@@ -30,6 +30,17 @@ dependencies:
 11. execute `sudo docker run -p 80:3838 edensoftware/eden`. eden is now running and can be accessed via the public IP or the public DNS e.g. at http://ec2-54-234-172-226.compute-1.amazonaws.com
 12. to terminate the server go to the *EC2 dashboard* an click *Actions > Instance state > Terminate*
 
+# install eden in the cloud (windows/linux/macOS)
+1. see https://aws.amazon.com/de/ec2/ and create an account and log in
+2. go to *Dahsboard* and click on *Launch Instance* and select *Ubuntu Server 14.4 LTS*
+3. choose the size of of server you want to rent, *t2.micro* is maybe free for some users
+4. click on *Next:Configure Instance Details* and click on *Next: Add Storage*. On the *Size (GiB)* box add 20GB. Click on "Next Add Tags" and "Next: Configure Security Groups". Click on *Add Rule* and add a *Custom TCP Rule (TCP)* with port range: 80 and select *Source: Anywhere*. Click on *Review and Launch* and *Launch*
+5. create a new key pair, and download this file to your local machine
+6. click *View Instance* and wait till the *Instance State* goes from *pending/initializing* to *running*
+7. click on "Launch Instance" and select *A Java SSH Client directly from my browser (Java required)* add add the path to the .pem file you downloaded in step 5. 
+10. On the terminal screen execute the command: `sudo apt-get install docker.io && sudo docker run -p 80:3838 edensoftware/eden`
+11. point your browser to the *Public DNS* or *Public IP* of your instance (under the *Description* Tab in the *Instance* Page in the aws administration panel)
+
 # submit a new job
 ![submit a new job](start.gif "submit a new job")
 
