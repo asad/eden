@@ -3,18 +3,19 @@ dependencies:
 - [Docker](https://github.com/docker/docker)
 - up to date version of [Google Chrome](https://www.google.de/chrome/browser/desktop/) or [Mozilla Firefox](https://www.mozilla.org/de/firefox/new/)
 
-# install linux & macOS
+# how to start docker
+## install linux & macOS
 1. make sure you have installed docker or install it via `sudo apt-get install docker.io`
 2. download/start the docker image `sudo docker run -p 80:3838 edensoftware/eden` (version with example files) you may want to use the smaller docker image without examplefiles `sudo docker run -p 80:3838 edensoftware/eden:minimal` 
 4. open your webbrowser and point it to [localhost](localhost), you should see the welcome screen
 
-# install eden on windows
+## install eden on windows
 1. see the tutorial https://docs.docker.com/docker-for-windows/ for installation and setting up docker on your windows machine
 2. Press *WinKey + R*, Input `cmd` and press enter to start the *cmd.exe* to open the command promt
 3. Type in the following command to download/start the docker image `sudo docker run -p 80:3838 edensoftware/eden` 
 4. point your webbrowser to  [localhost](localhost), you should see the welcome screen
 
-# install eden in the cloud (via amazon aws) (windows/linux/macOS)
+## install eden in the cloud (via amazon aws) (windows/linux/macOS)
 1. see https://aws.amazon.com/de/ec2/ and create an account and log in
 2. go to *Dahsboard* and click on *Launch Instance* and select *Ubuntu Server 14.4 LTS*
 3. choose the size of of server you want to rent, *t2.micro* is maybe free for some users
@@ -25,13 +26,15 @@ dependencies:
 10. On the terminal screen execute the command: `sudo apt-get install docker.io && sudo docker run -p 80:3838 edensoftware/eden`
 11. point your browser to the *Public DNS* or *Public IP* of your instance (under the *Description* Tab in the *Instance* Page in the aws administration panel)
 
-# submit a new job
+# how to use docker
+## submit a new job
 ![submit a new job](start.gif "submit a new job")
 
-# visualize results
+## visualize results
 ![visualize results](samples.gif "visualize results")
 
-# build your own docker image
+# develop
+## build your own docker image
 
 you can create the docker image from scratch:
 
