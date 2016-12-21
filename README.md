@@ -20,6 +20,7 @@ dependencies: [Docker](https://github.com/docker/docker)
 2. go to your dahsboard and click on *Launch Instance* and select "Ubuntu Server 14.4 LTS"
 3. choose the size of of server you want to rent, *t2.micro* is maybe free for some users
 4. click on *Review Instance Launch* and click on *Launch*
+5. to access eden via the webbrowser, you have to allow inbound/outbound connections. For this please click on *Security Groups* and *Create Security Group*. Please add Inbound/Outbound connection: HTTP, TCP, Port 80 from everywhere, destination `0.0.0.0/0`. Go back to *EC2 Dashboard* and click on *Actions > Network > Change Security Groups* and select the securiy group you have created. 
 5. create a new key pair, and download this file to your local machine
 6. click *Launch and View Instance* and wait till the *Instance State* goes from *pending* to *running*
 7. copy the Public DNS which looks like `ec2-54-234-172-226.compute-1.amazonaws.com
