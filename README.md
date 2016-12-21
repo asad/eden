@@ -25,7 +25,7 @@ dependencies: [Docker](https://github.com/docker/docker)
 7. copy the Public DNS which looks like `ec2-54-234-172-226.compute-1.amazonaws.com
 8. change the access of the local key you downloaded in step 5. `chmod 400 /path/key.pem`
 9. open your terminal (e.g. bash on linux/macOS, cmd on windwos) and login to the server by typing in: `ssh -i "/path-to-key-from-step-4/key.pem" ubuntu@your-public-dns-copied-in-step-6` and type in *yes*
-10. execute the command: `sudo apt-get install -y git && git clone https://github.com/philippmuench/eden.git && cd eden && sudo chmod a+x aws-install.sh && ./aws-install.sh`
+10. execute the command: `sudo apt-get install -y git && git clone https://github.com/naturesubmission/eden.git && cd eden && sudo chmod a+x aws-install.sh && ./aws-install.sh`
 11. execute `sudo docker run -p 80:3838 edensoftware/eden`. eden is now running and can be accessed via the public IP or the public DNS e.g. at http://ec2-54-234-172-226.compute-1.amazonaws.com
 12. to terminate the server go to the *EC2 dashboard* an click *Actions > Instance state > Terminate*
 
