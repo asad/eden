@@ -6,7 +6,7 @@ dependencies:
 # how to start docker
 ## install linux & macOS
 1. make sure you have installed docker or install it via `sudo apt-get install docker.io`
-2. download/start the docker image `sudo docker run -p 80:3838 edensoftware/eden` (version with example files) you may want to use the smaller docker image without examplefiles `sudo docker run -p 80:3838 edensoftware/eden:minimal` 
+2. download/start the docker image `sudo docker run -p 80:3838 edensoftware/eden` (version with example files) you may want to use the smaller docker image without example files `sudo docker run -p 80:3838 edensoftware/eden:minimal` 
 4. open your webbrowser and point it to [localhost](localhost), you should see the welcome screen
 
 ## install eden on windows
